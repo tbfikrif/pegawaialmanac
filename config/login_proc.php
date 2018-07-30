@@ -5,7 +5,7 @@
 			$username = mysqli_real_escape_string($conn,$_POST['user']);
 			$pass = md5(mysqli_real_escape_string($conn,$_POST['pass']));
 
-			$sql = "SELECT * FROM admin WHERE admin.username = '$username' and admin.password = '$pass' ";
+			$sql = "SELECT admin.* FROM admin WHERE admin.username = '$username' and admin.password = '$pass' ";
 			$res = mysqli_query($conn,$sql);
 			$check = mysqli_num_rows($res);
 
