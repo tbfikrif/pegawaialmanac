@@ -1,5 +1,5 @@
 <?php
-	$host = 'tcp:pegawaialmanacdb.database.windows.net,1433';
+	$host = 'pegawaialmanacdb.database.windows.net';
 	$user = 'almanac';
 	$pass = 'Tugasatol9';
 	$db = 'pegawaialmanacdb';
