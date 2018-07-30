@@ -19,6 +19,7 @@
 				echo "<script type='text/javascript'>
 						alert('Username atau password tidak ditemukan !');
 					  </script>";
+				echo "$username,$pass";
 			}
 		}
 		
