@@ -19,7 +19,6 @@
 				echo "<script type='text/javascript'>
 						alert('Username atau password tidak ditemukan !');
 					  </script>";
-				sleep(5);
 				header("location:../view/login.php");
 			}
 		}
