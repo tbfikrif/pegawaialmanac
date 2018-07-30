@@ -3,7 +3,7 @@
 	
 		if(isset($_POST['btn_login'])){
 			$username = $_POST['user'];
-			$pass = $_POST['pass'];
+			$pass = md5(mysqli_real_escape_string($conn,$_POST['pass']));
 
 			$sql = "SELECT * FROM admin WHERE username = '$username' and password = '$pass' ";
 			$res = mysqli_query($conn,$sql);
@@ -22,6 +22,17 @@
 				echo "$username,$pass";
 			}
 		}
-		
+		/*
+			$host = 'localhost';
+			$user = 'root';
+			$pass = '';
+			$db = 'dbkepegawaian';
+			// create connection
+			$conn = mysqli_connect($host,$user,$pass,$db);
+			// check connection
+			if(!$conn){
+			die("Connection Failed :".mysqli_connect_error());
+			}
+		*/
 
 ?>
