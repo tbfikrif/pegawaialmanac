@@ -2,7 +2,7 @@
 	require_once"conn_db.php";
 	
 		if(isset($_POST['btn_login'])){
-			$username = mysqli_real_escape_string($conn,$_POST['user']);
+			$username = $_POST['user'];
 			$pass = md5(mysqli_real_escape_string($conn,$_POST['pass']));
 
 			$sql = "SELECT * FROM admin WHERE username = '$username' and password = '$pass' ";
