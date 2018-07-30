@@ -9,10 +9,10 @@
 			$res = mysqli_query($conn,$sql);
 			$check = mysqli_num_rows($res);
 
-			if ($check==0){
-			//session_start();
-			//$_SESSION['username']=$username;
-			//$_SESSION['status'] = "login";
+			if ($check==1){
+			session_start();
+			$_SESSION['username']=$username;
+			$_SESSION['status'] = "login";
 			header("location:../view/dashboard.php");
 			}else{
 				//echo "GAGAL LOGIN !";
