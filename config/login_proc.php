@@ -3,7 +3,7 @@
 	
 		if(isset($_POST['btn_login'])){
 			$username = $_POST['user'];
-			$pass = md5(mysqli_real_escape_string($conn,$_POST['pass']));
+			$pass = $_POST['pass'];
 
 			$sql = "SELECT * FROM admin WHERE username = '$username' and password = '$pass' ";
 			$res = mysqli_query($conn,$sql);
